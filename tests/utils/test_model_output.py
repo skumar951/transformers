@@ -158,6 +158,8 @@ class ModelOutputTester(unittest.TestCase):
                 '[1, {"type": "tests.utils.test_model_output.ModelOutputTest", "context": ["a", "c"], "children_spec": [{"type": null, "context": null, "children_spec": []}, {"type": null, "context": null, "children_spec": []}]}]',
             )
 
+    # TODO: @ydshieh
+    @unittest.skip("CPU OOM")
     @require_torch
     def test_export_serialization(self):
         if not is_torch_greater_or_equal_than_2_2:
