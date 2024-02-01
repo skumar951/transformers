@@ -155,7 +155,7 @@ class ModelOutputTester(unittest.TestCase):
         if is_torch_greater_or_equal_than_2_2:
             self.assertEqual(
                 pytree.treespec_dumps(actual_tree_spec),
-                '[1, {"type": "tests.utils.test_model_output.ModelOutputTest", "context": ["a", "c"], "children_spec": [{"type": null, "context": null, "children_spec": []}, {"type": null, "context": null, "children_spec": []}]}]',
+                '[1, {"type": "tests.utils.test_model_output.ModelOutputTest", "context": "[\"a\", \"c\"]", "children_spec": [{"type": null, "context": null, "children_spec": []}, {"type": null, "context": null, "children_spec": []}]}]',
             )
 
     # TODO: @ydshieh
