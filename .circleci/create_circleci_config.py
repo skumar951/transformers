@@ -315,7 +315,7 @@ torch_job = CircleCIJob(
         "pip uninstall -y torch torchvision torchaudio && pip install -U --upgrade-strategy eager torch torchvision torchaudio",
     ],
     parallelism=1,
-    pytest_num_workers=4,
+    pytest_num_workers=6,
 )
 
 
